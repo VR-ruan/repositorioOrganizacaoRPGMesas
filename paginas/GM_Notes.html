@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anotações da Mesa</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header id="headerGMNotes">
+    <h1>Nome da Mesa</h1>
+    <button id="toggle-edit">🔒</button>
+  </header>
+  <main>
+    <div class="GM_Notation">
+      <form action="">
+        <textarea class="GM_Notes" name="anotacao" id="anotacao" readonly></textarea>
+      </form>
+    </div>
+  </main>
+  <footer>
+      <!-- <div class="conteudo-footer"> -->
+        <div>&copy; Todos os Direitos Reservados 2023.</div>
+      <!-- </div> -->
+  </footer>
+  <script>
+    const toggleEditBtn = document.getElementById("toggle-edit");
+    const notesInput = document.getElementById("anotacao");
+
+    toggleEditBtn.addEventListener("click", () => {
+      notesInput.readOnly = !notesInput.readOnly;
+      toggleEditBtn.classList.toggle("active");
+      toggleEditBtn.textContent = notesInput.readOnly ? "🔒" : "🔓";
+    });
+  </script>
+</body>
+
+</html>

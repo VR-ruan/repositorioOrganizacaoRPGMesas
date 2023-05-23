@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Meu Perfil</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="userCard">
+                <img class="userPerfilImage" src="../media/genericUser.jpg" alt="">
+                <h2 class="nameUser">Login</h2>
+                <button>Cadastro</button>
+                <button>Login </button>
+            </div>
+            <div class="title">
+                <h1>Dragon's Dice</h1>
+                <form action="">
+                    <div class="search-box">
+                        <input type="search" class="input-search" placeholder="Buscar Mesas e GM's">
+                        <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+
+
+        </header>
+        <div class="sidebar">
+            <div class="logo">
+                <a href="home_page.html">
+                    <img src="../media/logo.png" alt="logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./easteregg/memory.html">
+                            <i class="fa-solid fa-dice-d20"></i>
+                            <p>Jogar</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-receipt"></i>
+                            <p>Fichas</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Usuário</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-file"></i>
+                            <p>Relatórios</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <main>
+            <div class="user_selected_menu">
+                <div class="user_info">
+                    <img class="userPerfilImage " src="../media/genericUser.jpg" alt="">
+                    <form action="" class="formularioPerfil">
+                        <h2 class="textInfo InfoPerfil">Perfil</h2>
+                        <input type="file" class="carregarImagemUser" accept=".png,.jpg,.jpeg"></input>
+
+
+                        <input type="text" placeholder="Primeiro Nome">
+                        <input type="text" name="SobrenmUser" id="SobrenomeUser" placeholder="Sobrenome">
+                        <input type="email" name="emailUser" id="emailUser" placeholder="email@email.com">
+                        <input type="text" name="nickUser" id="nickUser" placeholder="Apelido">
+                        <input type="tel" name="nickUser" id="nickUser" placeholder="(00)000000000">
+                        <br>
+                        <input type="submit" value="Salvar">
+                    </form>
+
+                    <form action="" class="formularioSenha">
+                        <h2 class="textInfo InfoSenha">Senha</h2>
+                        <input type="password" placeholder="Confirme sua senha atual">
+                        <input type="password" placeholder="Senha" readonly>
+                        <input type="password" placeholder="Confirme a Nova Senha" readonly>
+                        <input type="submit" value="Salvar">
+                    </form>
+
+
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="conteudo-footer">
+                <div>&copy; Todos os Direitos Reservados 2023.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+:root {
+  --button-accept-color: #4e9350;
+  --button-accept-color-hover: #3f7540;
+  --button-reject-color: #af4c4c;
+  --button-reject-color-hover: #6f3333;
+}
+
+* {
+  transition: 100ms;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "DragonHunter";
+  src: url(../media/DragonHunter-9Ynxj.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url("../media/bgcortado.jpg");
+  /* background-color: rgb(240, 240, 240); */
+}
+
+.telasLoginLogonCreation {
+  background-color: #dfdfdff2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 65%;
+  /* Alterado de 700px para 90% /
+    max-width: 700px; / Adicionado para limitar a largura máxima */
+  border-radius: 8px;
+  -moz-box-shadow: -23px 22px 24px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: -23px 22px 24px -16px rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo img {
+  width: 100%;
+  margin: 20px auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+}
+
+.conteudo {
+  flex-basis: 60%;
+  /* Alterado de 500px para 60% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.telasLoginLogonCreation .conteudo h2 {
+  padding: 8px;
+  font-size: 0.7em;
+  text-transform: none;
+  color: rgb(80, 80, 80);
+}
+
+.telasLoginLogonCreation a {
+  display: inline-block;
+  font-size: 0.8em;
+  color: #505050;
+  text-decoration: none;
+}
+
+.telasLoginLogonCreation a:hover {
+  transform: scale(1.02);
+  color: rgb(100, 100, 244);
+}
+
+.telasLoginLogonCreation #Esquecer a {
+  font-size: 2em;
+}
+
+.userType {
+  display: flex;
+  padding: 5px;
+  padding-bottom: 12p;
+  margin-bottom: 6%;
+}
+
+.userType input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.userType input[type="radio"] + label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.userType label {
+  font-size: 0.8em;
+}
+
+.userType label:hover {
+  transform: scale(1.02);
+}
+
+.Informations input, #chooseGM {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: rgba(53, 53, 53, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid rgba(53, 53, 53, 0.32);
+}
+
+.conteudo .email label {
+  margin-right: 0.4em;
+}
+
+.criacao {
+  display: flex;
+  justify-content: space-around;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: end;
+  padding: 10px;
+  width: 100%;
+}
+
+.formulario input {
+  width: 100%;
+}
+
+.formulario input[id="nomeMesa"] {
+  width: 50%;
+}
+.conteudo input[type="number"] {
+  width: 50px;
+}
+input,
+select {
+  display: inline-block;
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+}
+.btConfirmar {
+  font-family: DragonHunter;
+
+  margin-left: auto;
+  margin: 8px;
+  width: 200px;
+  background-color: var(--button-accept-color);
+  /* cor de fundo */
+  border: none;
+  /* borda zero */
+  color: white;
+  /* cor do texto */
+  padding: 10px 20px;
+  /* espaçamento interno */
+  text-align: center;
+  /* alinhamento do texto */
+  text-decoration: none;
+  /* remoção do sublinhado */
+  display: inline-block;
+  /* exibição em linha */
+  font-size: 1.09em;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.btConfirmar:hover {
+  cursor: pointer;
+  background-color: var(--button-accept-color-hover);
+}
+
+.btCancelar {
+  font-family: DragonHunter;
+
+  margin-left: auto;
+  width: 200px;
+  margin: 8px;
+  background-color: #af4c4c;
+  /* cor de fundo */
+  border: none;
+  /* borda zero */
+  color: white;
+  /* cor do texto */
+  padding: 10px 20px;
+  /* espaçamento interno */
+  text-align: center;
+  /* alinhamento do texto */
+  text-decoration: none;
+  /* remoção do sublinhado */
+  display: inline-block;
+  /* exibição em linha */
+  font-size: 1.09em;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.btCancelar:hover {
+  cursor: pointer;
+  background-color: #853939;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-image: linear-gradient(to left, #f2e3d56c, #bf79609d);
+  flex-basis: 20%;
+  clear: both;
+  text-align: center;
+}
+
+@media (max-width: 920px) {
+  .telasLoginLogonCreation {
+    height: 70%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 750px) {
+  .telasLoginLogonCreation {
+    flex-direction: column;
+    height: 90%;
+  }
+
+  .telasLoginLogonCreation .logo {
+    order: 2;
+    z-index: 0;
+  }
+
+  .telasLoginLogonCreation .conteudo {
+    order: 1;
+    z-index: 1;
+  }
+
+  .telasLoginLogonCreation img {
+    width: 190px;
+  }
+
+  footer {
+    background-image: linear-gradient(to left, #f2e3d56c, #bf79609d);
+    flex-basis: 20%;
+    clear: both;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .telasLoginLogonCreation {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .telasLoginLogonCreation .logo {
+    order: 2;
+    z-index: 0;
+  }
+
+  .telasLoginLogonCreation .conteudo {
+    order: 1;
+    z-index: 1;
+  }
+
+  .telasLoginLogonCreation img {
+    width: 140px;
+  }
+
+  footer {
+    background-image: linear-gradient(to left, #f2e3d56c, #bf79609d);
+    flex-basis: 20%;
+    clear: both;
+    text-align: center;
+  }
+}
