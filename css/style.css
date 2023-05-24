@@ -8,6 +8,9 @@
 :root {
   --button-accept-color: #4e9350;
   --button-accept-color-hover: #3f7540;
+  --text-in-black: #131313;
+  --text-in-black-WHover:#484848;
+  --text-in-white: #e7e7e7;
 }
 
 * {
@@ -66,7 +69,7 @@ main {
 /* Define o cabeçalho */
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: DragonHunter;
   background-image: url("../media/bgcortado.jpg");
@@ -79,6 +82,7 @@ header {
   padding: 20px;
   box-shadow: 0px 10px 7px 0px rgba(92, 78, 34, 0.65);
   outline: none;
+  width: 98%;
 }
 
 #lista_mesas {
@@ -94,57 +98,42 @@ header {
 
 .userCard {
   display: flex;
+  align-self: flex-end;
+  /* position: absolute; */
   align-items: center;
-  text-align: center;
-  justify-content: flex-start;
+  justify-content: right;
+  flex-direction: column;
   border-radius: 8px;
   margin: 0.5rem 2%;
   padding: 1em;
-  max-width: 400px;
+  max-width: 100px;
   height: auto;
-  width: 40%;
-  max-width: 400px;
   display: flex;
-  background-color: rgba(244, 244, 244, 0.5);
+  background-color: rgba(244, 244, 244, 0.111);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(2px);
   box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 1);
 }
 
 .userCard .userPerfilImage {
-  width: 20%;
+  user-select: none;
+  cursor: pointer;
+  width: 60px;
   margin: 8% 2%;
   border: 1px solid black;
   border-radius: 50%;
 }
 
-.userCard button {
-  border-radius: 2px;
-  margin-top: 25% !important;
-  height: 25%;
-  width: 30%;
-  background-color: var(--button-accept-color);
-  /* cor de fundo */
-  border: none;
-  /* borda zero */
-  color: white;
-  /* cor do texto */
-  padding: 2px 8px;
-  /* espaçamento interno */
-  text-align: center;
-  /* alinhamento do texto */
-  /* text-decoration: none; remoção do sublinhado */
-  font-size: 1.09em;
-  margin: 4px;
-  z-index: 0;
-}
-
 .userCard h2 {
+  user-select: none;
   position: relative;
-  color: #000;
+  color: var(--text-in-white);
+  cursor: pointer;
+
 }
 
-.userCard button:hover {
-  cursor: pointer;
-  background-color: var(--button-accept-color-hover);
+.userCard h2:hover {
+  color: #fff;
 }
 
 .title {
@@ -303,6 +292,10 @@ header h1 {
   text-align: left;
   letter-spacing: 0.3px;
   margin-top: 10px;
+}
+
+.sidebar li .usarioUser{
+  display: none;
 }
 
 .mesa {
@@ -648,6 +641,7 @@ footer .conteudo1 {
 }
 
 footer .conteudo2 {
+  padding: 1;
   width: 450px;
   margin-bottom: 20px;
 }
@@ -680,11 +674,40 @@ footer .redes-sociais i:hover {
   transition: 100ms;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
+  .conteudo-footer{
+    justify-content: space-between;
+  }
+
+  footer .conteudo1 {
+    padding: 0 40px;
+    margin-bottom: 20px;
+    width: 30%;
+  }
+  
+  footer .conteudo2 {
+    width: 20%;
+    margin-bottom: 20px;
+  }
+  
+  footer .conteudo2 h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  footer .conteudo3 {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 770px) {
   header {
-    flex-direction: column;
+    /* flex-direction: column; */
     margin: 1rem 0;
     text-align: center;
+    width: 700px;
   }
 
   #lista_mesas {
@@ -703,16 +726,37 @@ footer .redes-sociais i:hover {
     width: 80%;
   }
 
-  .cardMesa {
+  li.cardMesa {
     margin: 0 auto;
+    margin-bottom: 15px;
   }
 
-  footer {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    flex-wrap: wrap;
+  footer .conteudo1 {
+    padding: 0 40px;
+    margin-bottom: 20px;
+    width: 100%;
   }
+  
+  footer .conteudo2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  footer .conteudo2 h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  footer .conteudo3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer .redes-sociais {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -722,10 +766,11 @@ footer .redes-sociais i:hover {
   #headerGMNotes {
     display: flex;
   }
+
   .sidebar {
     height: 25px;
     min-height: 95px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -786,6 +831,11 @@ footer .redes-sociais i:hover {
     text-align: center;
   }
 
+  .sidebar li .usarioUser{
+    display: flex;
+  }
+
+
   main {
     margin: 90px auto auto auto;
     background-image: url("../media/bgcortado.jpg");
@@ -795,9 +845,7 @@ footer .redes-sociais i:hover {
     width: 470px;
   }
 
-  .cardMesa {
-    margin: 5px auto;
-  }
+  
   .input-search {
     font-size: 14px;
   }
@@ -813,7 +861,15 @@ footer .redes-sociais i:hover {
   .search-box {
     width: 100%;
   }
+
+  footer{
+    min-width: 450px;
+  }
+
 }
+
+
+
 
 /* Fix para o campo de busca em dispositivos mobiles */
 @media (pointer: coarse) {
